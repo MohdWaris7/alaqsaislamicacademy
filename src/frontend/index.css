@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.99 0 0;
+    --foreground: 0.16 0.02 260;
+    --card: 0.99 0 0;
+    --card-foreground: 0.16 0.02 260;
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.16 0.02 260;
+    --primary: 0.38 0.11 148;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.95 0.02 148;
+    --secondary-foreground: 0.30 0.09 148;
+    --muted: 0.96 0.01 148;
+    --muted-foreground: 0.50 0.04 148;
+    --accent: 0.69 0.13 83;
+    --accent-foreground: 0.15 0.02 260;
+    --destructive: 0.55 0.18 27;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.90 0.02 148;
+    --input: 0.90 0.02 148;
+    --ring: 0.38 0.11 148;
+    --radius: 0.5rem;
+    --chart-1: 0.38 0.11 148;
+    --chart-2: 0.69 0.13 83;
+    --chart-3: 0.55 0.14 220;
+    --chart-4: 0.65 0.15 30;
+    --chart-5: 0.50 0.10 300;
+    --sidebar: 0.97 0.01 148;
+    --sidebar-foreground: 0.16 0.02 260;
+    --sidebar-primary: 0.38 0.11 148;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.93 0.03 148;
+    --sidebar-accent-foreground: 0.30 0.09 148;
+    --sidebar-border: 0.90 0.02 148;
+    --sidebar-ring: 0.38 0.11 148;
+    /* Islamic theme specific */
+    --gold: oklch(0.69 0.13 83);
+    --gold-light: oklch(0.88 0.08 83);
+    --green-deep: oklch(0.30 0.10 148);
+    --green-light: oklch(0.94 0.04 148);
+  }
+
+  .dark {
+    --background: 0.13 0.02 148;
+    --foreground: 0.95 0.01 83;
+    --card: 0.17 0.03 148;
+    --card-foreground: 0.95 0.01 83;
+    --popover: 0.17 0.03 148;
+    --popover-foreground: 0.95 0.01 83;
+    --primary: 0.55 0.14 148;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.22 0.04 148;
+    --secondary-foreground: 0.80 0.05 148;
+    --muted: 0.22 0.03 148;
+    --muted-foreground: 0.65 0.04 148;
+    --accent: 0.75 0.14 83;
+    --accent-foreground: 0.10 0.02 260;
+    --destructive: 0.60 0.18 27;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.25 0.04 148;
+    --input: 0.25 0.04 148;
+    --ring: 0.55 0.14 148;
+    --chart-1: 0.55 0.14 148;
+    --chart-2: 0.75 0.14 83;
+    --chart-3: 0.60 0.15 220;
+    --chart-4: 0.70 0.15 30;
+    --chart-5: 0.60 0.10 300;
+    --sidebar: 0.17 0.03 148;
+    --sidebar-foreground: 0.95 0.01 83;
+    --sidebar-primary: 0.55 0.14 148;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.22 0.04 148;
+    --sidebar-accent-foreground: 0.80 0.05 148;
+    --sidebar-border: 0.25 0.04 148;
+    --sidebar-ring: 0.55 0.14 148;
+    --gold: oklch(0.80 0.14 83);
+    --gold-light: oklch(0.40 0.08 83);
+    --green-deep: oklch(0.70 0.12 148);
+    --green-light: oklch(0.22 0.04 148);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .font-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    line-height: 2.2;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .urdu-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 2.4;
+    font-size: 1.125rem;
+  }
+
+  .urdu-heading {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* Reading progress bar */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: var(--gold);
+    transform-origin: right;
+    z-index: 100;
+  }
+
+  /* Islamic ornament divider */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .ornament-divider::before,
+  .ornament-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, transparent, oklch(0.38 0.11 148), transparent);
+  }
+
+  /* Article content styling */
+  .article-content h2 {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: oklch(var(--primary));
+    margin: 2rem 0 1rem;
+    line-height: 1.8;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 2.4;
+    font-size: 1.125rem;
+  }
+
+  .article-content blockquote {
+    border-right: 4px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: oklch(var(--muted));
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 2.2;
+  }
+
+  /* Card hover effects */
+  .article-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px -8px oklch(0.38 0.11 148 / 0.15);
+  }
+
+  /* Gold shimmer on headings */
+  .gold-text {
+    color: var(--gold);
+  }
+
+  /* Pattern overlay */
+  .islamic-pattern {
+    background-image: url('/assets/generated/islamic-pattern-bg-transparent.dim_400x400.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.04;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(var(--muted));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--primary));
+    border-radius: 3px;
+  }
+}
